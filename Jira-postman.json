@@ -1,0 +1,331 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "JIRA REST API",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "servers": [
+    {
+      "url": "https://mohamed-talaat.atlassian.net"
+    }
+  ],
+  "paths": {
+    "/rest/api/3/search/jql": {
+      "post": {
+        "summary": "Search JIRA Issues",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Search JIRA Issues",
+            "headers": {
+              "Transfer-Encoding": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Server": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Timing-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Arequestid": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Aaccountid": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Beta-Ratelimit-Limit": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "X-Beta-Ratelimit-Remaining": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Vary": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Xss-Protection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Atl-Traceid": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Atl-Request-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Report-To": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Nel": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Cache": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Via": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amz-Cf-Pop": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amz-Cf-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Server-Timing": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BasicAuth": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "jql": {
+                    "type": "string"
+                  },
+                  "maxResults": {
+                    "type": "integer"
+                  },
+                  "fields": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rest/api/3/project/search": {
+      "get": {
+        "summary": "Search JIRA Projects",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Search JIRA Issues",
+            "headers": {
+              "Transfer-Encoding": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Server": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Timing-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Arequestid": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Aaccountid": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Beta-Ratelimit-Limit": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "X-Beta-Ratelimit-Remaining": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Vary": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Xss-Protection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Atl-Traceid": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Atl-Request-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Report-To": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Nel": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Cache": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Via": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amz-Cf-Pop": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amz-Cf-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Server-Timing": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BasicAuth": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BasicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  }
+}
